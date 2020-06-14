@@ -1,10 +1,12 @@
 // Isn't tested
 
+// In Node Class
+
 public void AddSorted(int data)
 {
-    if (next == null) 
+    if (Next == null) 
     {
-        next = new Node(data);
+        Next = new Node(data);
     }
     else if(data < next.Data) 
     {
@@ -15,5 +17,23 @@ public void AddSorted(int data)
     else 
     {
         Next.AddSorted(Data);
+    }
+}
+
+// In List Class
+
+public void AddSorted(int data)
+{
+    if (headNode == null) 
+    {
+        headNode = new Node(data);
+    }
+    else if(data < headNode.Data) 
+    {
+        AddToBeginning(data); // Or just copy AddToBeginning code Here
+    }
+    else 
+    {
+        headNode.AddSorted(data);
     }
 }
