@@ -2,16 +2,18 @@
 
 public void AddToFront(T data)
 {
-	if (begin == null)
+	if (begin == null) //If List is empty
 	{
-		begin = new Node(data, null);
+		begin = new Node(data, null); //Set the begging as data
+		//Count++;
 	}
-	else
+	else //If List isn't empty
 	{
-		Node temp = new Node(data, null);
+		Node temp = new Node(data, null); //Create a new temp node
 
-		temp.Next = begin;
+		temp.Next = begin; //Make the first node of list, the next node of the new node
 
-		begin = temp;
+		begin = temp; //Set the new node as the beggining
+		//Count++;
 	}
 }
