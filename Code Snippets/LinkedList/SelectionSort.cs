@@ -27,6 +27,7 @@ public void SelectionSortV2()
 	{
 		Node min = current;
 		Node InnerData = current.Next;
+
 		while (InnerData != null)
 		{
 			if (InnerData.Data.CompareTo(min.Data) < 0)

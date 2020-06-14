@@ -63,22 +63,11 @@
             return current != null;
         }
 
-        /// <summary>
-        /// One of four interface methods devoted to loop through a list and get value stored in it.
-        /// Method should be used to get the value stored in the node pointed by the internal pointer.
-        /// </summary>
-        /// <returns>the value of the element that is pointed by the internal pointer.</returns>
         public T Get()
         {
             return current.Data;
         }
 
-        /// <summary>
-        /// Removes the element that is pointed by the internal pointer and advances the internal
-        /// pointer to the next element. The method should be used in a combination with the methods
-        /// Begin(), Next(), Exist().
-        /// If the last element of the list is removed, the internal pointer is assigned null.
-        /// </summary>
         public void RemoveCurrent()
         {
             if (current is null)return;
@@ -106,16 +95,11 @@
                     end = prev;
 
                 current.Next = null;
+
                 current = prev.Next;
             }
         }
 
-        /// <summary>
-        /// Method appends new node to the end of the list and saves in it <paramref name="data"/>
-        /// passed by the parameter.
-        /// THE STUDENT SHOULD IMPLEMENT THIS METHOD ACCORDING THE TASK.
-        /// </summary>
-        /// <param name="data">The data to be stored in the list.</param>
         public void Add(T data)
         {
             if (begin == null)
@@ -134,11 +118,6 @@
             }
         }
 
-        /// <summary>
-        /// Method sorts data in the list. The data object class should implement IComparable
-        /// interface though defining sort order.
-        /// THE STUDENT SHOULD IMPLEMENT THIS METHOD ACCORDING THE TASK.
-        /// </summary>
         public void Sort()
         {
             if (begin == null)
