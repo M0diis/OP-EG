@@ -11,53 +11,27 @@
             }
         }
 
-        /// <summary>
-        /// All the time should point to the first element of the list.
-        /// </summary>
         private Node begin;
-        /// <summary>
-        /// All the time should point to the last element of the list.
-        /// </summary>
 
         private Node end;
 
-        /// <summary>
-        /// Shouldn't be used in any other methods except Begin(), Next(), Exist() and Get().
-        /// </summary>
         private Node current;
 
-        /// <summary>
-        /// Initializes a new instance of the LinkList class with empty list.
-        /// </summary>
         public LinkList()
         {
             begin = current = end = null;
         }
 
-        /// <summary>
-        /// One of four interface methods devoted to loop through a list and get value stored in it.
-        /// Method should be used to move internal pointer to the first element of the list.
-        /// </summary>
         public void Begin()
         {
             current = begin;
         }
 
-        /// <summary>
-        /// One of four interface methods devoted to loop through a list and get value stored in it.
-        /// Method should be used to move internal pointer to the next element of the list.
-        /// </summary>
         public void Next()
         {
             current = current.Next;
         }
 
-        /// <summary>
-        /// One of four interface methods devoted to loop through a list and get value stored in it.
-        /// Method should be used to check whether the internal pointer points to the element of the list.
-        /// </summary>
-        /// <returns>true, if the internal pointer points to some element of the list; otherwise,
-        /// false.</returns>
         public bool Exist()
         {
             return current != null;
