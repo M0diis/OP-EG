@@ -42,7 +42,7 @@ int sum = (from x in list where x > 4 select x).Sum();
 
 // Example 4
 
-IList<Student> studentList = new List<Student>>()
+IList<Student> studentList = new List<Student>()
 {
     new Student() { StudentID = 1, StudentName = "John", Age = 13 },
     new Student() { StudentID = 2, StudentName = "Moin", Age = 21 },
